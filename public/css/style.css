@@ -102,7 +102,7 @@ body {
 .city-form {
   width: 95%;
   max-width: 600px;
-  margin: 15px auto 0 auto;
+  margin: 16px auto 0 auto;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -124,7 +124,7 @@ body {
 .city-form__input {
   width: 80%;
   height: 30px;
-  margin: 10px;
+  margin: 8px;
   padding: 5px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -162,10 +162,10 @@ body {
 .city-selection {
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  margin: 8px;
 }
 .city-selection__info {
-  margin: 5px auto;
+  margin: 8px auto;
   background: linear-gradient(to right, #f9d976, #f39f86);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -183,7 +183,7 @@ body {
   font-size: 1em;
   border-radius: 5px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding: 5px;
   font-weight: 500;
 }
@@ -198,31 +198,56 @@ body {
   height: auto;
 }
 /*** affichage météo actuelle ***/
-.current-forecast {
+.forecast {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   color: white;
   width: 95%;
   max-width: 600px;
-  margin: 5px auto 0 auto;
+  margin: 8px auto;
+}
+/* .current-forecast {
+  padding: 8px;
+} */
+.current-forecast__list-location {
+  display: flex;
+  justify-content: center;
+}
+.current-forecast__item {
+  margin: 8px 8px;
+}
+.current-forecast__list-datetime {
   text-align: center;
 }
+.current-forecast__list-skyinfos {
+  text-align: center;
+}
+.current-forecast__item-temp {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.current-forecast__icon {
+  width: 80px;
+  height: auto;
+}
+/* .current-forecast__item-descr::first-letter {
+  text-transform: capitalize;
+} */
+/*** affichage météo périodique ***/
 .periodical-forecast {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
   color: white;
   font-weight: bold;
-  width: 95%;
-  max-width: 600px;
   margin: auto;
   text-align: center;
 }
 .periodical-forecast__list {
   padding: 10px;
   margin: auto;
-  min-width: 15%;
+  width: 23%;
+  border-top: 2px solid var(--primary-color);
 }
 /*# sourceMappingURL=style.css.map */

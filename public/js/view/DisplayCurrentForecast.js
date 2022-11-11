@@ -56,10 +56,10 @@ class DisplayCurrentForecast {
         listSkyInfos.className = "current-forecast__list current-forecast__list-skyinfos";
         itemTemp.innerHTML     = `${currentWeather.getTemperature()} °C`;
         itemTemp.className     = "current-forecast__item current-forecast__item-temp";       
-        itemImg.className      = "current-forecast__item current-forecast__item-img-icon";
+        itemImg.className      = "current-forecast__item current-forecast__item-icon";
         img.src                = `http://openweathermap.org/img/wn/${currentWeather.getWeatherIcon()}@2x.png`;
         img.alt                = `${currentWeather.getDescription()}`;
-        img.className          = "current-forecast__img_icon";       
+        img.className          = "current-forecast__icon";       
         itemDescr.innerHTML    = `${currentWeather.getDescription()}`;
         itemDescr.className    = "current-forecast__item current-forecast__item-descr";
         
