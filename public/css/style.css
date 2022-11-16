@@ -101,7 +101,7 @@ body {
 /*** recherche de la ville ***/
 .city-form {
   width: 95%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 16px auto 0 auto;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -186,6 +186,7 @@ body {
   margin-bottom: 8px;
   padding: 5px;
   font-weight: 500;
+  cursor: pointer;
 }
 .city-selection__item:hover {
   background: var(--primary-linear-gradient);
@@ -203,7 +204,7 @@ body {
   border-radius: 10px;
   color: white;
   width: 95%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 8px auto;
 }
 /* .current-forecast {
@@ -226,14 +227,38 @@ body {
   font-size: 3em;
   font-weight: bold;
   margin-bottom: 0;
+  background: linear-gradient(to right, #f9d976, #f39f86);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .current-forecast__icon {
   width: 80px;
   height: auto;
 }
-/* .current-forecast__item-descr::first-letter {
-  text-transform: capitalize;
-} */
+.current-forecast__item-descr {
+  margin-bottom: 8px;
+}
+.current-forecast__list-others {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+.current-forecast__item-humidity,
+.current-forecast__item-wind,
+.current-forecast__item-sunrise,
+.current-forecast__item-sunset,
+.current-forecast__item-feelTemp {
+  border: 1px solid rgba(243, 159, 134, 1);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  width: 45%;
+  margin: 5px auto;
+}
+
 /*** affichage météo périodique ***/
 .periodical-forecast {
   display: flex;
@@ -241,7 +266,7 @@ body {
   font-size: 14px;
   color: white;
   font-weight: bold;
-  margin: auto;
+  margin: 16px auto;
   text-align: center;
 }
 .periodical-forecast__list {

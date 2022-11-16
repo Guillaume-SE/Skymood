@@ -64,14 +64,14 @@ class DisplayCurrentForecast {
         itemDescr.className    = "current-forecast__item current-forecast__item-descr";
         
         listOthers.className   = "current-forecast__list current-forecast__list-others";
-        itemHumidity.innerHTML = `Humidité: ${currentWeather.getHumidity()}%`;
-        itemHumidity.className = "current-forecast__item current-forecast__item-humidity";
-        itemWind.innerHTML     = `Vent: ${currentWeather.getWindSpeed()} km/h`;
-        itemWind.className     = "current-forecast__item current-forecast__item-wind";
         itemSunrise.innerHTML  = `Lever: ${sunrise}`;
         itemSunrise.className  = "current-forecast__item current-forecast__item-sunrise";
         itemSunset.innerHTML   = `Coucher: ${sunset}`;
         itemSunset.className   = "current-forecast__item current-forecast__item-sunset";
+        itemHumidity.innerHTML = `Humidité: ${currentWeather.getHumidity()}%`;
+        itemHumidity.className = "current-forecast__item current-forecast__item-humidity";
+        itemWind.innerHTML     = `Vent: ${currentWeather.getWindSpeed()} km/h`;
+        itemWind.className     = "current-forecast__item current-forecast__item-wind";
         itemFeelTemp.innerHTML = `Ressenti: ${currentWeather.getFeelTemperature()} °C`;
         itemFeelTemp.className = "current-forecast__item current-forecast__item-feelTemp";
 
@@ -89,10 +89,10 @@ class DisplayCurrentForecast {
     listSkyInfos.append(itemImg);
     listSkyInfos.append(itemDescr);
     section.append(listOthers);
-    listOthers.append(itemHumidity);
-    listOthers.append(itemWind);
     listOthers.append(itemSunrise);
     listOthers.append(itemSunset);
+    listOthers.append(itemHumidity);
+    listOthers.append(itemWind);
     listOthers.append(itemFeelTemp);
 
     }
