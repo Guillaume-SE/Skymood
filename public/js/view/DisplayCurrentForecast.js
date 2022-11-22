@@ -64,15 +64,15 @@ class DisplayCurrentForecast {
         itemDescr.className    = "current-forecast__item current-forecast__item-descr";
         
         listOthers.className   = "current-forecast__list current-forecast__list-others";
-        itemSunrise.innerHTML  = `Lever: ${sunrise}`;
+        itemSunrise.innerHTML  = `Lever:  ${sunrise}`;
         itemSunrise.className  = "current-forecast__item current-forecast__item-sunrise";
-        itemSunset.innerHTML   = `Coucher: ${sunset}`;
+        itemSunset.innerHTML   = `Coucher:  ${sunset}`;
         itemSunset.className   = "current-forecast__item current-forecast__item-sunset";
-        itemHumidity.innerHTML = `Humidité: ${currentWeather.getHumidity()}%`;
+        itemHumidity.innerHTML = `Humidité:  ${currentWeather.getHumidity()}%`;
         itemHumidity.className = "current-forecast__item current-forecast__item-humidity";
-        itemWind.innerHTML     = `Vent: ${currentWeather.getWindSpeed()} km/h`;
+        itemWind.innerHTML     = `Vent:  ${currentWeather.getWindSpeed()} km/h`;
         itemWind.className     = "current-forecast__item current-forecast__item-wind";
-        itemFeelTemp.innerHTML = `Ressenti: ${currentWeather.getFeelTemperature()} °C`;
+        itemFeelTemp.innerHTML = `Ressenti:  ${currentWeather.getFeelTemperature()} °C`;
         itemFeelTemp.className = "current-forecast__item current-forecast__item-feelTemp";
 
     section.append(listLocation);

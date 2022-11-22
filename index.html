@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name = "description" content = "Les conditions météorologiques actuelle dans la ville de votre choix">
+    <meta name="description" content="Les conditions météorologiques actuelle dans la ville de votre choix">
     <title>
         Skymood - Consultez la météo du jour de nombreuses villes
     </title>
@@ -13,50 +14,68 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="public/css/style.css" />
 </head>
+
 <body>
     <header class="header">
         <h1 class="header__title">
             Prévisions météo de la journée par ville
         </h1>
     </header>
-    
-    <section class="city-form">
-        <label class="city-form__label" for = "city">Rechercher une ville</label>
-        <div class="inline">
-            <input name = "city" 
-                    type= "text"
-                    id = "city"
-                    class="city-form__input"
-                    autocomplete="off"
-            >
-            <button name = "confirm"
-                    id = "confirmCity" 
-                    type = "submit"
-                    class="city-form__button"
-                    >
-                <img class="city-form__button-icon"
-                    src="public/img/icon/search.svg" 
-                    alt="Rechercher">
-            </button>
-        </div>
-            
-        <span id="errorMessage" class="city-form__error-message"></span>
-        
-        <div id="citySelection" 
-            class="city-selection">
-        </div>
-    </section>
 
-    <section class="forecast">
-        <section id="currentForecast"
-                class="current-forecast">
+    <main>
+        <!-- city selection and validation -->
+        <section class="city-form">
+            <div class="inline">
+                <label class="city-form__label" for="city">Rechercher une ville</label>
+                <button class="city-form__button-info" id="showInfo">
+                    <img class="city-form__icon-info" src="public/img/icon/info.svg" alt="">
+                </button>
+            </div>
+            <div class="inline">
+                <input name="city" type="text" id="city" class="city-form__input" autocomplete="off">
+                <button name="confirm" id="confirmCity" type="submit" class="city-form__button-search">
+                    <img class="city-form__icon-search" src="public/img/icon/search.svg" alt="Rechercher">
+                </button>
+            </div>
+
+            <span id="errorMessage" class="city-form__error-message"></span>
+
+            <div id="citySelection" class="city-selection">
+            </div>
         </section>
+        <!-- inforamtion modal -->
+        <div class="information-modal" id="infoModal">
+            <div class="information-modal__heading">
+                <h2 class="information-modal__title">Précisions de recherches</h2>
+                <button class="information-modal__button">&#215</button>
+            </div>
+                <p>
+                    Les résultats de recherches étant limités à 3 maximum et classés par pertinence,vous pourriez ne 
+                    pas voir apparaitre le résultat attendu étant donné que des pays partagent des même noms de villes.
+                </p>
+                <p>
+                    Pour palier à cela, vous avez la possibilité de préciser le pays, la région, l'Etat ou encore
+                    le canton à la suite du nom de la ville, le tout séparé par un espace.
+                </p>
+                <p>
+                    Exemple:
+                </p>
+                <p>
+                    La recherche "Paris" deviendrai "Paris France".
+                </p>
+            </div>
 
-        <section id="periodicalForecast"
-                class="periodical-forecast">    
+        <!-- different forecast -->
+        <section class="forecast">
+            <section id="currentForecast" class="current-forecast">
+            </section>
+
+            <section id="periodicalForecast" class="periodical-forecast">
+            </section>
         </section>
-    </section>
+    </main>
 
-    <script type = "module" src = "public/js/script.js"></script>
+    <script type="module" src="public/js/script.js"></script>
 </body>
+
 </html>

@@ -108,8 +108,6 @@ body {
   border-radius: 10px;
 }
 .city-form__label {
-  display: flex;
-  justify-content: center;
   background: linear-gradient(to right, #f9d976, #f39f86);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -121,8 +119,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+.city-form__button-info {
+  margin-left: 24px;
+  padding: 5px;
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  text-align: center;
+  background-color: transparent;
+}
+.city-form__icon-info {
+  filter: invert(71%) sepia(6%) saturate(3042%) hue-rotate(324deg)
+    brightness(99%) contrast(92%);
+  width: 16px;
+  height: auto;
+}
 .city-form__input {
-  width: 80%;
+  width: 70%;
   height: 30px;
   margin: 8px;
   padding: 5px;
@@ -133,9 +148,8 @@ body {
   color: white;
   font-weight: bold;
 }
-.city-form__button {
-  width: 35px;
-  height: 35px;
+.city-form__button-search {
+  margin: 8px;
   cursor: pointer;
   border-radius: 10px;
   padding: auto;
@@ -143,15 +157,18 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid var(--primary-color);
 }
-.city-form__button:active {
+.city-form__button-info:active,
+.city-form__button-search:active {
   transform: translateY(1px);
 }
-.city-form__button:hover {
+.city-form__button-info:hover,
+.city-form__button-search:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.city-form__button-icon {
+.city-form__icon-search {
   filter: invert(71%) sepia(6%) saturate(3042%) hue-rotate(324deg)
     brightness(99%) contrast(92%);
+  width: 24px;
 }
 .city-form__error-message {
   display: flex;
@@ -207,9 +224,6 @@ body {
   max-width: 800px;
   margin: 8px auto;
 }
-/* .current-forecast {
-  padding: 8px;
-} */
 .current-forecast__list-location {
   display: flex;
   justify-content: center;
