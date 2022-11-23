@@ -25,13 +25,13 @@
     <main>
         <!-- city selection and validation -->
         <section class="city-form">
-            <div class="inline">
+            <div class="city-form__heading">
                 <label class="city-form__label" for="city">Rechercher une ville</label>
-                <button class="city-form__button-info" id="showInfo">
+                <button class="city-form__button-info" id="showModal">
                     <img class="city-form__icon-info" src="public/img/icon/info.svg" alt="">
                 </button>
             </div>
-            <div class="inline">
+            <div class="city-form__search">
                 <input name="city" type="text" id="city" class="city-form__input" autocomplete="off">
                 <button name="confirm" id="confirmCity" type="submit" class="city-form__button-search">
                     <img class="city-form__icon-search" src="public/img/icon/search.svg" alt="Rechercher">
@@ -43,27 +43,30 @@
             <div id="citySelection" class="city-selection">
             </div>
         </section>
-        <!-- inforamtion modal -->
+        <!-- information modal -->
         <div class="information-modal" id="infoModal">
-            <div class="information-modal__heading">
-                <h2 class="information-modal__title">Précisions de recherches</h2>
-                <button class="information-modal__button">&#215</button>
-            </div>
-                <p>
-                    Les résultats de recherches étant limités à 3 maximum et classés par pertinence,vous pourriez ne 
-                    pas voir apparaitre le résultat attendu étant donné que des pays partagent des même noms de villes.
+            <h2 class="information-modal__title">Précisions de recherches</h2>
+            <div class="information-modal__textbloc">
+                <p class="information-modal__text">
+                    Les résultats de recherches étant limités à 3 maximum et classés par pertinences, vous pourriez ne 
+                    pas voir apparaitre le résultat attendu étant donné que certains pays ont des noms de villes en commun.
                 </p>
-                <p>
-                    Pour palier à cela, vous avez la possibilité de préciser le pays, la région, l'Etat ou encore
-                    le canton à la suite du nom de la ville, le tout séparé par un espace.
+                <p class="information-modal__text">
+                    Pour remédier à cela, vous avez la possibilité de préciser le pays, la région, l'État ou encore le canton 
+                    à la suite du nom de la ville, le tout séparé par un espace.
                 </p>
-                <p>
+                <p class="information-modal__text">
                     Exemple:
                 </p>
-                <p>
-                    La recherche "Paris" deviendrai "Paris France".
+                <p class="information-modal__text">
+                    "Paris" deviendrait "Paris France".
                 </p>
             </div>
+            <div class="information-modal__buttonbloc">
+                <button class="information-modal__button" id="hideModal">Fermer</button>
+            </div>
+        </div>
+        <div class="information-modal__overlay" id="overlay"></div>
 
         <!-- different forecast -->
         <section class="forecast">
