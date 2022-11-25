@@ -1,175 +1,90 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
+
 ul {
   list-style: none;
 }
-button,
-input,
-select {
+
+button, input, select {
   margin: 0;
 }
+
 html {
   box-sizing: border-box;
 }
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   box-sizing: inherit;
 }
-img,
-video {
+
+img, video {
   height: auto;
   max-width: 100%;
 }
+
 iframe {
   border: 0;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-td,
-th {
+
+td, th {
   padding: 0;
 }
 
-:root {
-  --main-font-family: "Poppins", sans-serif;
-  --main-font-size: 16px;
-  --primary-linear-gradient: linear-gradient(to right, #f9d976, #f39f86);
-  --primary-color: rgba(243, 159, 134, 1);
-  --secondary-color: rgba(249, 217, 118, 1);
-}
-body {
-  font-family: var(--main-font-family);
-  font-size: var(--main-font-size);
-  background: rgba(0, 0, 0, 0.7);
-  background-image: url(../img/background/default.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: black;
-}
-.header {
-  background-color: rgba(0, 0, 0, 0.9);
-  text-align: center;
-}
-.header__title {
-  font-size: 0.9em;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-  background: var(--primary-linear-gradient);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-/*** modal  ***/
-.information-modal__overlay {
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}
-.information-modal__overlay-visible {
-  opacity: 1;
-  pointer-events: all;
-}
-.information-modal {
-  display: none;
-  position: fixed;
-  width: 90%;
-  max-width: 800px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 200ms ease-in-out;
-  background-color: rgba(0, 0, 0, 1);
-  color: white;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  padding: 10px;
-  z-index: 10;
-}
-.information-modal-active {
-  display: block;
-}
-.information-modal__title {
-  padding: 10px 15px;
-  text-align: center;
-  border-bottom: 2px solid var(--primary-color);
-  background: linear-gradient(to right, #f9d976, #f39f86);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-.information-modal__textbloc {
-  padding: 10px;
-}
-.information-modal__text {
-  margin: 16px 8px;
-}
-.information-modal__buttonbloc {
-  display: flex;
-  justify-content: center;
-}
-.information-modal__button {
-  padding: 10px 5px;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  background: var(--primary-linear-gradient);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
-/*** recherche de la ville ***/
-.city-form__heading {
+.city-form__error-message, .city-form__search, .city-form__heading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.city-form__label, .header__title {
+  background: linear-gradient(to right, #F9D976, #F39F86);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.city-form__button-search:active, .city-form__button-info:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 5px #F39F86;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-image: url(../img/background/default.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* header */
+.header {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.header__title {
+  font-size: 0.9em;
+  padding: 10px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* bloc search city */
 .city-form {
   width: 95%;
   max-width: 800px;
@@ -178,33 +93,26 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
 }
+
 .city-form__label {
-  background: linear-gradient(to right, #f9d976, #f39f86);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
   font-weight: bold;
 }
+
 .city-form__button-info {
   margin-left: 24px;
   padding: 5px;
   width: 30px;
-  height: auto;
+  text-align: center;
   cursor: pointer;
-  background: var(--primary-linear-gradient);
+  background: linear-gradient(to right, #F9D976, #F39F86);
   border: none;
   border-radius: 50%;
-  text-align: center;
 }
+
 .city-form__icon-info {
   width: 12px;
-  height: auto;
 }
-.city-form__search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .city-form__input {
   width: 70%;
   height: 30px;
@@ -212,151 +120,34 @@ body {
   padding: 5px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;
-  color: white;
+  border: 2px solid #F39F86;
+  border-radius: 10px;
+  color: #FFFFFF;
   font-weight: bold;
 }
+
 .city-form__button-search {
   margin: 8px;
+  padding: auto;
   cursor: pointer;
   border-radius: 10px;
-  padding: auto;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid var(--primary-color);
+  border: 2px solid #F39F86;
 }
-.information-modal__button:active,
-.city-form__button-info:active,
-.city-form__button-search:active {
-  transform: translateY(1px);
-}
+
 .city-form__button-search:hover {
   background-color: rgba(0, 0, 0, 0.8);
   transition: 0.2s;
 }
+
 .city-form__icon-search {
-  filter: invert(71%) sepia(6%) saturate(3042%) hue-rotate(324deg)
-    brightness(99%) contrast(92%);
   width: 24px;
-}
-.city-form__error-message {
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-/*** choix d'une ville ***/
-.city-selection {
-  display: flex;
-  flex-direction: column;
-  margin: 8px;
-}
-.city-selection__info {
-  margin: 8px auto;
-  background: linear-gradient(to right, #f9d976, #f39f86);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-align: center;
-  font-weight: bold;
-}
-.city-selection__list {
-  color: white;
-}
-.city-selection__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1em;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 8px;
-  padding: 5px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.city-selection__item:hover {
-  background: var(--primary-linear-gradient);
-  color: black;
-  font-weight: 500;
-}
-.city-selection__img,
-.current-forecast__img_flag {
-  width: 24px;
-  height: auto;
-}
-/*** affichage météo actuelle ***/
-.forecast {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  color: white;
-  width: 95%;
-  max-width: 800px;
-  margin: 8px auto;
-}
-.current-forecast__list-location {
-  display: flex;
-  justify-content: center;
-}
-.current-forecast__item {
-  margin: 8px 8px;
-}
-.current-forecast__list-datetime {
-  text-align: center;
-}
-.current-forecast__list-skyinfos {
-  text-align: center;
-}
-.current-forecast__item-temp {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 0;
-  background: linear-gradient(to right, #f9d976, #f39f86);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-.current-forecast__icon {
-  width: 80px;
-  height: auto;
-}
-.current-forecast__item-descr {
-  margin-bottom: 8px;
-}
-.current-forecast__list-others {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 95%;
-  margin: auto;
-}
-.current-forecast__item-humidity,
-.current-forecast__item-wind,
-.current-forecast__item-sunrise,
-.current-forecast__item-sunset,
-.current-forecast__item-feelTemp {
-  border: 1px solid rgba(243, 159, 134, 1);
-  border-radius: 10px;
-  padding: 5px;
-  text-align: center;
-  width: 45%;
-  margin: 5px auto;
+  filter: invert(71%) sepia(6%) saturate(3042%) hue-rotate(324deg) brightness(99%) contrast(92%);
 }
 
-/*** affichage météo périodique ***/
-.periodical-forecast {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 14px;
-  color: white;
-  font-weight: bold;
-  margin: 16px auto;
-  text-align: center;
+.city-form__error-message {
+  color: #FFFFFF;
 }
-.periodical-forecast__list {
-  padding: 10px;
-  margin: auto;
-  width: 23%;
-  border-top: 2px solid var(--primary-color);
-}
-/*# sourceMappingURL=style.css.map */
+
+/* city choice *//*# sourceMappingURL=style.css.map */

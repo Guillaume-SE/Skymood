@@ -1,0 +1,29 @@
+// Font
+
+$primary-font-family: "Poppins", sans-serif;
+$base-font-size: 16px;
+$h1-font-size: 0.9em;
+$h2-font-size: 1.2em;
+
+// Colors
+
+$dark: #000000;
+$light: #FFFFFF;
+$primary: #F39F86;
+$secondary: #F9D976;
+$primary-to-filter: invert(71%) sepia(6%) saturate(3042%) hue-rotate(324deg) brightness(99%) contrast(92%);
+
+//Utils size and positions
+
+$border-radius-el: 10px;
+$btn-rounded: 50%;
+
+// Border
+
+$border-default: 2px solid $primary;
+
+//Backgrounds
+
+$background-light: rgba(0, 0, 0, 0.5);
+$background-darker: rgba(0, 0, 0, 0.8);
+$background-dark: rgba(0, 0, 0, 1);

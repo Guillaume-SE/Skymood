@@ -1,0 +1,17 @@
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%text-linear-gradient {
+    background: linear-gradient(to right, $secondary, $primary);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+%btn-active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 5px $primary;
+}

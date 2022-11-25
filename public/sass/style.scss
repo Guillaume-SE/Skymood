@@ -1,5 +1,111 @@
-@import "../libs/reset.scss";
+@import "./libs/_reset.scss";
+@import "./libs/_variables.scss";
+@import "./libs/_placeholders.scss";
+@import "./libs/_mixins.scss";
 
 body {
-    background-color: grey;
+    font-family: $primary-font-family;
+    font-size: $base-font-size;
+    background-image: url(../img/background/default.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: $background-light;
 }
+
+/* header */
+.header {
+    background-color: $background-dark;
+    text-align: center;
+}
+
+.header__title {
+    @extend %text-linear-gradient;
+    font-size: $h1-font-size;
+    padding: 10px;
+    font-weight: bold;
+    color: $light;
+}
+
+/* bloc search city */
+
+.city-form__heading {
+    @extend %flex-center;
+}
+
+.city-form {
+    width: 95%;
+    max-width: 800px;
+    margin: 16px auto 0 auto;
+    padding: 10px;
+    background-color: $background-darker;
+    border-radius: $border-radius-el;
+}
+
+.city-form__label {
+    @extend %text-linear-gradient;
+    font-weight: bold;
+}
+
+.city-form__button-info {
+    margin-left: 24px;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(to right, $secondary, $primary);
+    border: none;
+    border-radius: $btn-rounded;
+}
+.city-form__button-info:active {
+    @extend %btn-active;
+}
+.city-form__icon-info {
+    width: 12px;
+}
+
+.city-form__search {
+    @extend %flex-center;
+}
+
+.city-form__input {
+    width: 70%;
+    height: 30px;
+    margin: 8px;
+    padding: 5px;
+    text-align: center;
+    background-color: $background-light;
+    border: $border-default;
+    border-radius: $border-radius-el;
+    color: $light;
+    font-weight: bold;
+}
+
+.city-form__button-search {
+    margin: 8px;
+    padding: auto;
+    cursor: pointer;
+    border-radius: $border-radius-el;
+    text-align: center;
+    background-color: $background-light;
+    border: $border-default;
+}
+.city-form__button-search:hover {
+    background-color: $background-darker;
+    transition: 0.2s;
+}
+.city-form__button-search:active {
+    @extend %btn-active;
+}
+
+.city-form__icon-search {
+    width: 24px;
+    filter: $primary-to-filter;
+}
+
+.city-form__error-message {
+    @extend %flex-center;
+    color: $light;
+}
+
+/* city choice */
