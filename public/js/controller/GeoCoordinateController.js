@@ -6,7 +6,7 @@ import SessionStorage           from "../utils/SessionStorage.js";
 import CreatePathForFlag        from '../other/CreatePathForFlag.js';
 
 class GeoCoordinate {
-    
+
     async getGeoCoordinateForCity() {
         const api               = new GeoCoordinateApi();
         const domElements       = new DomElements();

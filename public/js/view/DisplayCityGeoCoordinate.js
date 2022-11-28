@@ -1,6 +1,5 @@
 import DomElements       from "../other/DomElements.js";
 import SendCoordinate    from '../other/SendCoordinateToForecast.js';
-import DynamicBackground from '../other/DynamicBackground.js';
 
 class DisplayCityGeoCoordinate {
 

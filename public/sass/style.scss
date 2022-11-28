@@ -18,7 +18,6 @@ body {
     background-color: $background-dark;
     text-align: center;
 }
-
 .header__title {
     @extend %text-linear-gradient;
     font-size: $h1-font-size;
@@ -28,7 +27,6 @@ body {
 }
 
 /* bloc search city */
-
 .city-form__heading {
     @extend %flex-center;
 }
@@ -41,19 +39,17 @@ body {
     background-color: $background-darker;
     border-radius: $border-radius-el;
 }
-
 .city-form__label {
     @extend %text-linear-gradient;
     font-weight: bold;
 }
-
 .city-form__button-info {
     margin-left: 24px;
     padding: 5px;
     width: 30px;
     text-align: center;
     cursor: pointer;
-    background: linear-gradient(to right, $secondary, $primary);
+    background: $background-linear;
     border: none;
     border-radius: $btn-rounded;
 }
@@ -63,11 +59,9 @@ body {
 .city-form__icon-info {
     width: 12px;
 }
-
 .city-form__search {
     @extend %flex-center;
 }
-
 .city-form__input {
     width: 70%;
     height: 30px;
@@ -80,7 +74,6 @@ body {
     color: $light;
     font-weight: bold;
 }
-
 .city-form__button-search {
     margin: 8px;
     padding: auto;
@@ -97,15 +90,200 @@ body {
 .city-form__button-search:active {
     @extend %btn-active;
 }
-
 .city-form__icon-search {
     width: 24px;
     filter: $primary-to-filter;
 }
-
 .city-form__error-message {
     @extend %flex-center;
     color: $light;
 }
 
+/* modal */
+.information-modal__overlay {
+    @include fixed-el(0, 0, 0, 0);
+    opacity: 0;
+    background-color: $background-darker;
+    transition: $default-transition;
+    pointer-events: none;
+}
+.information-modal__overlay-visible {
+    opacity: 1;
+    pointer-events: all;
+}
+.information-modal {
+    display: none;
+    position: fixed;
+    width: 90%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    right:auto;
+    bottom: auto;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    transition: $default-transition;
+    background-color: $background-dark;
+    color: $light;
+    border: $border-default;
+    border-radius: $border-radius-el;
+    z-index: 10;
+}
+.information-modal-active {
+    display: block;
+}
+.information-modal__title {
+    @extend %text-linear-gradient;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: $border-default;
+}
+.information-modal__textbloc {
+    padding: 10px;
+}
+.information-modal__text {
+    margin: 16px 8px;
+}
+.information-modal__buttonbloc {
+    @extend %flex-center;
+}
+.information-modal__button {
+    padding: 10px 5px;
+    text-align: center;
+    color: $dark;
+    font-weight: bold;
+    background: $background-linear;
+    border: none;
+    border-radius: $border-radius-el;
+    cursor: pointer;
+}
+.information-modal__button:active {
+    @extend %btn-active;
+}
+
 /* city choice */
+.city-selection {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+.city-selection__info {
+    @extend %text-linear-gradient;
+    margin: 8px auto;
+    text-align: center;
+    font-weight: bold;
+}
+.city-selection__list {
+    color: $light;
+}
+.city-selection__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $border-radius-el;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+}
+.city-selection__item:hover {
+    background: $background-linear;
+    color: $dark;
+    font-weight: 500;
+}
+.city-selection__img {
+    width: 24px;
+    height: auto;
+}
+
+/* display forecast */
+.forecast {
+    width: 95%;
+    max-width: 800px;
+    margin: 8px auto;
+    background-color: $background-darker;
+    border-radius: $border-radius-el;
+}
+
+/* current forecast */
+.current-forecast {
+    color: $light;
+}
+.current-forecast__list-location {
+    @extend %flex-center;
+}
+.current-forecast__img_flag {
+    width: 24px;
+    height: auto;
+}
+.current-forecast__item {
+    margin: 8px 8px;
+}
+.current-forecast__list-datetime {
+    text-align: center;
+}
+.current-forecast__list-skyinfos {
+    text-align: center;
+}
+.current-forecast__item-temp {
+    @extend %text-linear-gradient;
+    margin-bottom: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+.current-forecast__icon {
+    width: 80px;
+    height: auto;
+}
+.current-forecast__item-descr {
+    margin-bottom: 8px;
+}
+.current-forecast__list-others {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.current-forecast__item-humidity {
+    width: 45%;
+    margin: 5px auto;
+    padding: 5px;
+    border: $border-default;
+    border-radius: $border-radius-el;
+    text-align: center;
+}
+.current-forecast__item-wind {
+    @extend .current-forecast__item-humidity;
+}
+.current-forecast__item-sunrise {
+    @extend .current-forecast__item-humidity;
+}
+.current-forecast__item-sunset {
+    @extend .current-forecast__item-humidity;
+}
+.current-forecast__item-feelTemp {
+    @extend .current-forecast__item-humidity;
+}
+
+/* periodical forecast */
+.periodical-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px auto;
+    font-size: 1em;
+    color: $light;
+    font-weight: bold;
+    text-align: center;
+}
+.periodical-forecast__list {
+    width: 23%;
+    margin: auto;
+    padding: 10px;
+    border-top: $border-default;
+}

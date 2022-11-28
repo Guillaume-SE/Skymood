@@ -8,13 +8,12 @@ class GeoCoordinateApi {
     }
 
     async getCoordinateByCity(city) {
-        
+
         try {
             const response = await fetch(`${this.#apiUrl}/search?text=${city}&type=city&lang=fr&format=json&limit=3&apiKey=${this.#apiKey}`);
             const datas    = await response.json();
-            // console.log(datas);
-            if( response.status === 404 || 
-                datas.statusCode === 400 || 
+            if( response.status === 404 ||
+                datas.statusCode === 400 ||
                 datas.results.length === 0 ) {
                 return {success: false , error: "Aucun résultats"};
             }

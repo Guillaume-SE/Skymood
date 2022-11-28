@@ -15,7 +15,7 @@ class Forecast {
         const displayForecast = new DisplayCurrentForecast();
         const flagPath        = new CreatePathForFlag();
         const dynamicBckgrnd  = new DynamicBackground();
-        
+
         const userSelection       = domElements.getBySelector(".city-selection__item");
         const latitude            = domElements.getDataAttribute(userSelection, "latitude");
         const longitude           = domElements.getDataAttribute(userSelection, "longitude");
@@ -23,7 +23,7 @@ class Forecast {
         const countryCode         = domElements.getDataAttribute(userSelection, "cntycode").toUpperCase();
         const countryFlag         = flagPath.createPath([countryCode]);
         const response            = await api.getCurrentWeatherForecastByCity(latitude, longitude);
-        
+
         if(response.success) {
             const currentWeather = new CurrentWeather(response.datas);
             const weatherIcon    = currentWeather.getWeatherIcon();
@@ -42,7 +42,7 @@ class Forecast {
         const latitude            = domElements.getDataAttribute(userSelection, "latitude");
         const longitude           = domElements.getDataAttribute(userSelection, "longitude");
         const response            = await api.getPeriodicalWeatherForecastByCity(latitude, longitude);
-        
+
         if(response.success) {
             let arrayPeriodicalWeather = [];
             response.datas.list.map( pw => {

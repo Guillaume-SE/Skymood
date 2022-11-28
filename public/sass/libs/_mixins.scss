@@ -7,11 +7,10 @@
     transform: translate($x, $y);
 }
 
-@mixin fixed-el ($top, $right, $bottom, $left, $x, $y)  {
-    position: absolute;
+@mixin fixed-el ($top, $right, $bottom, $left)  {
+    position: fixed;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
-    transform: translate($x, $y);
 }

@@ -12,7 +12,6 @@ class WeatherApi {
         try {
             const response = await fetch(`${this.#apiUrl}/weather?lat=${latitude}&lon=${longitude}&appid=${this.#apiKey}&units=metric&lang=fr`);
             const datas    = await response.json();
-            // console.log(datas);
 
             if(response.status === 404 ) {
                 return {success: false , error: "Aucun résultats"};
@@ -28,13 +27,12 @@ class WeatherApi {
         try {
             const response = await fetch(`${this.#apiUrl}/forecast?lat=${latitude}&lon=${longitude}&appid=${this.#apiKey}&units=metric&cnt=8&lang=fr`);
             const datas    = await response.json();
-            // console.log(datas);
 
             if(response.status === 404 ) {
                 return {success: false , error: "Aucun résultats"};
             }
             return {success: true, error: '', datas: datas};
-        
+
         } catch(error) {
             return {success: false , error: error};
         }
