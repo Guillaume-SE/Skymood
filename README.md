@@ -2,7 +2,7 @@
 
 Un site permettant de connaître la météo du moment et avoir les prévisions des 24 prochaines heures le tout par tranches de 3 heures et ce pour la totalité des villes du monde.
 
-# Pourquoi Skymood ?
+## Pourquoi Skymood ?
 
 Un besoin de pratique du Javascript avant d'aborder le framework Angular mais en faisant quelque chose de concret et complet.
 
