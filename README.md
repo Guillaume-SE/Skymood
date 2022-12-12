@@ -16,7 +16,8 @@ De 2 apis:
 Il suffit juste de faire quelques convertions simples comme pour la vitesse du vent, les latitudes et longitudes ainsi que pour les fuseaux horaires.
 
 Pour le reste c'est du vanilla !
-Il est construit sur une structure type MVC comme ceci:
+Il est construit sur une structure type MVC comme ceci:  
+
 **Repository**: Contient mes fetch aux différentes apis.  
 
 **Controller**: Gère les données en faisant les échanges entre repository et view mais également aux fonctions situées dans Other comme pour créer des chemins d'images dynamiquement.  
