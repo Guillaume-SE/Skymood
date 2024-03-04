@@ -32,11 +32,4 @@ Il est construit sur une structure type MVC comme ceci:
 
 Il y a également un stockage fait dans le session storage pour qu'il y soit stocké le nom de la ville recherché par l'utilisateur pour que s'il cherche à nouveau la même ville, aucune appel à l'api ne soit effectué.
 
-
-Première utilisation de scss.
-
-## Les possible améliorations ?
-
-Un meilleurs nommage des fonctions et variables et un découpage plus propre du code !
-
 Bonne visite !
