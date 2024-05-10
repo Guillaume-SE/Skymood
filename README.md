@@ -1,3 +1,8 @@
+![Static Badge](https://img.shields.io/badge/html-FD501A?style=for-the-badge&logo=html5&logoColor=white)
+![Static Badge](https://img.shields.io/badge/css-306AF1?style=for-the-badge&logo=css3&logoColor=white)
+![Static Badge](https://img.shields.io/badge/javascript-EFD81B?style=for-the-badge&logo=javascript&logoColor=black)
+![Static Badge](https://img.shields.io/badge/sass-C56293?style=for-the-badge&logo=sass&logoColor=white)
+
 ## Qu'est-ce que Skymood ?
 
 Un site permettant de connaître la météo du moment et avoir les prévisions des 24 prochaines heures le tout par tranches de 3 heures et ce pour la totalité des villes du monde.
